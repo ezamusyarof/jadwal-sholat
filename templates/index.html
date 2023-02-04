@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="../static/img/icons8-time-machine-96.png">
+    <title hidden>Waktu Sholat</title>
+    <title>Waktu Sholat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="{{ url_for('static', filename='jscript.js') }}"></script>
+</head>
+<body onload="initClock()">
+
+    <div class="kotak">
+        <h3 class="judul">Jadwal Sholat</h3>
+        <div class="search">
+            <form method="post">
+                <input hidden>
+                <input name="lokasi" class="lokasi" list="list-lokasi" id="myLocation" name="myLocation" placeholder="{{ lokasi }} . . .">
+                <datalist id="list-lokasi" class="list-lokasi">
+                    <option value="1225" selected hidden>KOTA DEPOK</option>
+                    {% for item in data_lokasi %}
+                    <option value="{{ item["lokasi"] }}">{{ item["id"] }}</option>
+                    {% endfor %}
+                </datalist>
+                <button type="submit" class="btn-search">Search</button>
+            </form>
+        </div>
+
+        <!-- <p class="tgl">{{ today }}</p> -->
+
+        <div class="box">
+            <!-- <p>Lokasi : {{ lokasi }}</p> -->
+            <br>
+            <div class="waktu">
+                <div class="tgl">{{ data_jadwal["data"]["jadwal"]["tanggal"] }}</div>
+                <div class="jam">
+                    <span id="hour">00</span> :
+                    <span id="minutes">00</span> :
+                    <span id="seconds">00</span>
+                </div>
+            </div>
+            <div class="line"></div>
+            <table class="jadwal">
+                <tr>
+                    <td><div class="name"><span id="subuh">Subuh</span></div></td>
+                    <td><div class="jam-sholat"><span id="subuh1">{{ data_jadwal["data"]["jadwal"]["subuh"] }}</span></div></td>
+                </tr>
+
+                <tr>
+                    <td><div class="name"><span id="dhuha">Dhuha</span></div></td>
+                    <td><div class="jam-sholat"><span id="dhuha1">{{ data_jadwal["data"]["jadwal"]["dhuha"] }}</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="name"><span id="dzuhur">Dzuhur</span></div></td>
+                    <td><div class="jam-sholat"><span id="dzuhur1">{{ data_jadwal["data"]["jadwal"]["dzuhur"] }}</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="name"><span id="ashar">Ashar</span></div></td>
+                    <td><div class="jam-sholat"><span  id="ashar1">{{ data_jadwal["data"]["jadwal"]["ashar"] }}</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="name"><span id="maghrib">Maghrib</span></div></td>
+                    <td><div class="jam-sholat"><span id="maghrib1">{{ data_jadwal["data"]["jadwal"]["maghrib"] }}</span></div></td>
+                </tr>
+                <tr>
+                    <td><div class="name"><span id="isya">Isya</span></div></td>
+                    <td><div class="jam-sholat"><span id="isya1">{{ data_jadwal["data"]["jadwal"]["isya"] }}</span></div></td>
+                </tr>
+            </table>
+            <div class="line"></div>
+            <div class="ayat">
+                <p> {{ ayat }}</p>
+                <div class="sc">[ {{ surah }} ]</div>
+            </div>
+        </div>
+        <p>{{ notif }}</p>
+    </div>
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,179 @@
+body {
+    background: #000000;
+    margin: 0px;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.kotak {
+    height: 60px;
+    margin: 35px auto;
+    top: 0px;
+}
+.judul {
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 35px;
+    line-height: 75px;
+    color: #FFFFFF;
+    margin: 0;
+}
+.search {
+    text-align: center;
+    width: 469px;
+    height: 68px;
+    margin: 10px auto;
+    background: #444E6B;
+    border-radius: 35px;
+}
+.btn-search {
+    width: 25%;
+    height: 44px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 35px;
+    border: none;
+    margin-left: 5%;
+
+    font-family: 'IBM Plex Mono';
+    font-weight: 700;
+    font-size: 20px;
+    color: #4D587A;
+
+    cursor: pointer;
+}
+.lokasi {
+    width: 60%;
+    height: 44px;
+    margin-left: 0px;
+
+    background: transparent;
+    border: none;
+    outline-color: transparent;
+    border-radius: 35px;
+    color: transparent;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    padding-left: 15px;
+    margin: 2.5% auto;
+
+    color: #FFFFFF;
+}
+.lokasi::placeholder {
+    height: 26px;
+    left: 766px;
+    top: 226px;
+
+    font-style: normal;
+    font-size: 20px;
+    line-height: 26px;
+
+    color: #ffffff9d;
+    padding-left: 15;
+}
+.box {
+    width: 469px;
+    height: 455px;
+    margin: 20px auto;
+    background: linear-gradient(180deg, #4E5A7D 0.52%, #363D52 100%);
+    border-radius: 35px;
+}
+.waktu {
+    display: flex;
+    margin: 10px 30px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 26px;
+    color: #FFFFFF;
+}
+.waktu .tgl {
+    width: 60%;
+}
+.waktu .jam {
+    width: 40%;
+    text-align: right;
+}
+.line {
+    height: 0px;
+    margin: 10px 30px;
+    border: 5px solid rgba(255, 255, 255, 0.75);
+}
+.jadwal {
+    margin: 10px 30px;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.jadwal td .name {
+    text-align: left;
+    opacity: 95%;
+    margin-right: 100px;
+}
+.jadwal td .jam-sholat {
+    text-align: right;
+    width: 120px;
+}
+.jadwal td .now {
+    font-weight: 600;
+    text-shadow: 0px 0px 7px rgba(255, 255, 255, 0.80);
+}
+.ayat {
+    text-align: center;
+    color: #ffffff9d;
+    margin: 10px 30px;
+    font-size: 18px;
+}
+.ayat .sc {
+    color: #ffffff;
+    margin-top: -10px;
+}
+@media screen and (max-width: 500px) {
+    .judul {
+        margin-top: -5px;
+    }
+    .search {
+        width: 80%;
+        height: 52px;
+    }
+    .btn-search {
+        height: 30px;
+        font-size: 18px;
+        margin: 0 2.5%;
+    }
+    .lokasi {
+        height: 30px;
+        margin: 2.5% auto;
+        margin-left: 2.5%;
+    }
+    .lokasi::placeholder {
+        font-size: 18px;
+    }
+    .box {
+        width: 80%;
+        height: 500px;
+    }
+    .waktu {
+        font-size: 18px;
+    }
+    .jadwal {
+        font-size: 26px;
+    }
+    .jadwal td .name {
+        margin-right: 0px;
+    }
+    .ayat {
+        margin-top: 32px;
+        font-size: 14px;
+    }
+    .ayat .sc {
+        margin-top: 10px;
+    }
+}
+@media screen and (min-width: 501px) {
+    .jadwal td .name {
+        margin-right: 170px;
+    }
+}
