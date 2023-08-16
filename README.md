@@ -8,4 +8,4 @@ End-point API         : https://api.myquran.com
 Dokumentasi end-point : https://documenter.getpostman.com/view/841292/Tz5p7yHS
 
 
-Thanks  :feather:
+Thanks 🐣
