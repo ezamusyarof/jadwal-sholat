@@ -7,5 +7,7 @@ End-point API         : https://api.myquran.com
 
 Dokumentasi end-point : https://documenter.getpostman.com/view/841292/Tz5p7yHS
 
+How to run this web : `python app.py`
+
 
 Thanks 🐣
